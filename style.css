@@ -69,12 +69,18 @@ background-color: #1E1E1E;
 
 /* HOME */
 .home{
+
   display: flex;
   background-color: transparent;
   align-items: center;
   padding: 45px;
   width: 50vw;
   height: 100vh;
+}
+
+.home-content{
+  padding-top: 100px;
+
 }
 
 .home h1{
@@ -86,25 +92,31 @@ background-color: #1E1E1E;
 }
 
 .content-txt{
+  margin-top: 10px;
   max-width: 500px;
+  line-height: 1.4;
 }
 
 .btn-box{
+
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   margin-top: 30px;
   width: 345px;
   height: 50px;
 
 }
-
 .btn-box a{
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border: 2px solid white;
+  border: 3px solid white;
   border-radius: 10px;
   background-color: #c1272d;
   height: 100%;
@@ -114,16 +126,80 @@ background-color: #1E1E1E;
   font-weight: 500;
   text-decoration: none;
   transition-duration: 0.3s;
-}
 
-.btn-box a:hover{
-  color: #1E1E1E;
-}
+  overflow: hidden;
 
+  z-index: 1;
+}
 .btn-box a:nth-child(2){
   background-color: transparent;
 }
+.btn-box a::before{
+  content: '';
+  top:0;
+  left: 0;
+  position: absolute;
+  background: #c1272d;
+  width: 0%;
+  height: 100%;
+  transition-duration: 0.5s;
+  z-index: -1;
+}
+.btn-box a:nth-child(1)::before{
+  background: #1E1E1E;
+}
 
-.btn-box a:nth-child(2):hover{
-  color: #c1272d;
+.btn-box a:hover::before{
+  width: 100%;
+}
+
+.home-social{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+
+  position: absolute; /* RICORDATI*/
+  width: 170px;
+  font-size: 20px;
+  margin-top: 50px;
+
+}
+
+.home-social a{
+  position: relative;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  z-index: 1;
+
+
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid white;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: #1E1E1E;
+
+}
+
+.home-social a::before{
+  content: '';
+  top:0;
+  left: 0;
+  position: absolute;
+  background: #c1272d;
+  width: 0%;
+  height: 100%;
+  transition-duration: 0.5s;
+  z-index: -1;
+
+}
+
+.home-social a:hover::before{
+  width: 100%;
 }
