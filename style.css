@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Poppins:wght@300;400;500;700;800;900&display=swap');
 /*
-Main colors: #1E1E1E ; #F8F2D4; #c1272d
-
+Main colors: #1e1e1e ; #F8F2D4; #c1272d;
+#A01D1E
+https://coolors.co/1e1e1e-e1d89f-c1272d-a01d1e
 */
+:root {
+  --nero: #1e1e1e;
+  --vaniglia: #E1D89F;
+  --rossoChiaro: #c1272d;
+  --rossoScuro: #A01D1E
+}
+
 * {
   font-family: 'Poppins', sans-serif ;
   margin: 0;
@@ -11,7 +19,7 @@ Main colors: #1E1E1E ; #F8F2D4; #c1272d
   color: white;
 }
 body{
-background-color: #1E1E1E;
+background-color: var(--nero);
 
 }
 /* HEADER */
@@ -23,7 +31,7 @@ background-color: #1E1E1E;
   z-index: 100;
   margin: 0;
   padding: 0;
-  background: #F8F2D4;
+  background: var(--vaniglia);
   width: 100%;
   padding: 20px 8%;
   color: black;
@@ -61,10 +69,10 @@ background-color: #1E1E1E;
 }
 .navbar a:hover{
 
-  color: #c1272d;
+  color: var(--rossoChiaro);
 }
 .navbar a.active{
-  color: #c1272d;
+  color: var(--rossoChiaro);
 }
 
 /* HOME */
@@ -85,10 +93,11 @@ background-color: #1E1E1E;
 
 .home h1{
   font-size: 45px;
+
 }
 
 .home h3{
-  color: #c1272d;
+  color: var(--rossoChiaro);
 }
 
 .content-txt{
@@ -118,7 +127,7 @@ background-color: #1E1E1E;
 
   border: 3px solid white;
   border-radius: 10px;
-  background-color: #c1272d;
+  background-color: var(--rossoChiaro);
   height: 100%;
   width: 40%;
 
@@ -139,14 +148,14 @@ background-color: #1E1E1E;
   top:0;
   left: 0;
   position: absolute;
-  background: #c1272d;
+  background: var(--rossoChiaro);
   width: 0%;
   height: 100%;
   transition-duration: 0.5s;
   z-index: -1;
 }
 .btn-box a:nth-child(1)::before{
-  background: #1E1E1E;
+  background: var(--nero);
 }
 
 .btn-box a:hover::before{
@@ -183,7 +192,7 @@ background-color: #1E1E1E;
   border: 3px solid white;
   border-radius: 50%;
   text-decoration: none;
-  background-color: #1E1E1E;
+  background-color: var(--nero);
 
 }
 
@@ -192,7 +201,7 @@ background-color: #1E1E1E;
   top:0;
   left: 0;
   position: absolute;
-  background: #c1272d;
+  background: var(--rossoChiaro);
   width: 0%;
   height: 100%;
   transition-duration: 0.5s;
