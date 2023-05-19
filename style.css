@@ -217,6 +217,34 @@ background-color: var(--nero);
 
 /* ABOUT ME */
 
-.About{
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: var(--generalPadding);
+  bac
+  gap: 3rem; /*spazio tra le robe*/
+}
+
+.heading{
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align:center;
+}
+
+.about-img{
+
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about.img img{
+  width: 50%;
+  border-radius: 40;
+  border: 0.2rem solid var(--rossoChiaro);
 }
