@@ -8,7 +8,8 @@ https://coolors.co/1e1e1e-e1d89f-c1272d-a01d1e
   --nero: #1e1e1e;
   --vaniglia: #E1D89F;
   --rossoChiaro: #c1272d;
-  --rossoScuro: #A01D1E
+  --rossoScuro: #A01D1E;
+  --generalPadding: 45px;
 }
 
 * {
@@ -17,6 +18,7 @@ https://coolors.co/1e1e1e-e1d89f-c1272d-a01d1e
   padding: 0;
   box-sizing: border-box;
   color: white;
+
 }
 body{
 background-color: var(--nero);
@@ -81,7 +83,7 @@ background-color: var(--nero);
   display: flex;
   background-color: transparent;
   align-items: center;
-  padding: 45px;
+  padding: var(--generalPadding);
   width: 50vw;
   height: 100vh;
 }
@@ -211,4 +213,10 @@ background-color: var(--nero);
 
 .home-social a:hover::before{
   width: 100%;
+}
+
+/* ABOUT ME */
+
+.About{
+  padding: var(--generalPadding);
 }
