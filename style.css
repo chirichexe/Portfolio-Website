@@ -109,8 +109,6 @@ background-color: var(--nero);
 }
 
 .btn-box{
-
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -292,8 +290,9 @@ background-color: var(--nero);
   background-color: var(--nero)	;
 }
 
-.text-box{
-  display: inline-flex;
-  justify-content: space-around;
+.text-box {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
   
 }
