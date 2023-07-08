@@ -257,6 +257,10 @@ background-color: var(--nero);
   font-size: 27px;
 }
 
+.about h3{
+  font-size: 30px;
+}
+
 .about-img .circle-spin{
   position: absolute;
   top: 50%;
@@ -278,9 +282,13 @@ background-color: var(--nero);
   justify-content: center;
 }
 
+.btn-box.new a::before{
+  background-color: #2e2e2e;
+}
+
 /* JOUURNEY */
 
-.journey{
+.services{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,8 +299,8 @@ background-color: var(--nero);
 }
 
 .text-box {
-  width: 800px;
+  width: 1000px;
   display: flex;
   justify-content: space-between;
-  
+  gap: 4rem
 }
