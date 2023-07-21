@@ -7,7 +7,7 @@ https://coolors.co/1e1e1e-e1d89f-c1272d-a01d1e
 :root {
   --nero: #1e1e1e;
   --grigio: #2e2e2e;
-  --vaniglia: #E1D89F;
+  --chiaro: white;
   --rossoChiaro: #c1272d;
   --rossoScuro: #A01D1E;
   --generalPadding: 45px;
@@ -34,7 +34,7 @@ background-color: var(--nero);
   z-index: 100;
   margin: 0;
   padding: 0;
-  background: var(--vaniglia);
+  background: var(--chiaro);
   width: 100%;
   padding: 20px 8%;
   color: black;
@@ -80,7 +80,6 @@ background-color: var(--nero);
 
 /* HOME */
 .home{
-
   display: flex;
   background-color: transparent;
   align-items: center;
@@ -347,6 +346,56 @@ background-color: var(--nero);
 /* PORTFOLIO */
 
 .portfolio{
+  margin-top: 20px;
   background-color: var(--grigio);
+  border-radius: 20px;
+  width: 1300px;
+  padding-top: 20px;
+}
+
+.portfolio-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--generalPadding);
+}
+
+.project{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--chiaro);
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px var(--nero);
+}
+
+.project .text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+}
+
+.project h3{
+  font-size: larger;
+  color: var(--rossoChiaro);
+}
+
+.project p{
+  font-size: larger;
+  color: var(--grigio);
+}
+
+.project img{
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 6%;
+  border-top-right-radius: 6%;
+}
+
+.project:hover img{
+  transform: scale(1.5);
+  transition: 1s;
 }
 
