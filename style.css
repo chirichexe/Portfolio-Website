@@ -53,7 +53,7 @@ background-color: var(--nero);
 }
 
 .logo:hover{
-  color: grey;
+  color:var(--rossoChiaro);
 }
 
 .none{
@@ -344,4 +344,9 @@ background-color: var(--nero);
   padding: 10 10 10 15;
 }
 
+/* PORTFOLIO */
+
+.portfolio{
+  background-color: var(--grigio);
+}
 
