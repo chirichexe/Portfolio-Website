@@ -346,11 +346,24 @@ background-color: var(--nero);
 /* PORTFOLIO */
 
 .portfolio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--generalPadding);
+
+}
+
+.portfolio-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--generalPadding);
   margin-top: 20px;
   background-color: var(--grigio);
   border-radius: 20px;
   width: 1300px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .portfolio-content{
@@ -361,6 +374,8 @@ background-color: var(--nero);
 }
 
 .project{
+  margin-right: 40px;
+  margin-left: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,13 +383,19 @@ background-color: var(--nero);
   width: 300px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px var(--nero);
+  overflow: hidden;
 }
 
 .project .text{
+  background-color: var(--chiaro);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10%;
+}
+
+.inner{
+  overflow: hidden;
 }
 
 .project h3{
@@ -387,15 +408,15 @@ background-color: var(--nero);
   color: var(--grigio);
 }
 
+
 .project img{
   width: 100%;
-  height: 200px;
-  border-top-left-radius: 6%;
-  border-top-right-radius: 6%;
+  filter: grayscale();
+  transition: all 1s ease; /*Comodo per gestire */
 }
 
-.project:hover img{
+.project img:hover{
   transform: scale(1.5);
-  transition: 1s;
+  filter: initial;
 }
 
