@@ -392,13 +392,14 @@ background-color: var(--nero);
   flex-direction: column;
   align-items: center;
   padding: 10%;
+  gap: 10px; /*spazio tra le robe*/
 }
 
 .inner{
   overflow: hidden;
 }
 
-.project h3{
+.project h1{
   font-size: larger;
   color: var(--rossoChiaro);
 }
@@ -416,7 +417,7 @@ background-color: var(--nero);
 }
 
 .project img:hover{
-  transform: scale(1.5);
+  transform: scale(1.3);
   filter: initial;
 }
 
