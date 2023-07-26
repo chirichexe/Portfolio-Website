@@ -28,17 +28,17 @@ background-color: var(--nero);
 /* HEADER */
 .header{
   display: flex;
+  background: var(--chiaro);
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 100;
   margin: 0;
   padding: 0;
-  background: var(--chiaro);
   width: 100%;
   padding: 20px 8%;
   color: black;
-
+  transition: all .5s ease;
 }
 
 .logo{
@@ -47,12 +47,15 @@ background-color: var(--nero);
   font-weight: 600;
   align-items: center;
   text-decoration: none;
-  color: black;
   margin-left: -30px;
   transition-duration: 0.3s;
 }
 
-.logo:hover{
+.name{
+  color: black;
+}
+
+.name:hover{
   color:var(--rossoChiaro);
 }
 
@@ -63,15 +66,23 @@ background-color: var(--nero);
   color: black;
 }
 
-.navbar a{
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--chiaro);
+  width: 450px;
+  height: 40px;
+  border-radius: 20px;
+}
 
+.navbar a{
   margin-left: 15px;
   text-decoration: none;
   color: black;
   transition-duration: 0.3s;
 }
 .navbar a:hover{
-
   color: var(--rossoChiaro);
 }
 .navbar a.active{
@@ -84,18 +95,17 @@ background-color: var(--nero);
   background-color: transparent;
   align-items: center;
   padding: var(--generalPadding);
-  width: 50vw;
-  height: 100vh;
+  /*width: 50vw;*/
+  height: 110vh;
+  background-image: url(files_1/big_bkg.png);
 }
 
 .home-content{
-  padding-top: 100px;
-
+  padding-top: 0px;
 }
 
 .home h1{
   font-size: 75px;
-
 }
 
 .home h3{
@@ -118,24 +128,21 @@ background-color: var(--nero);
   width: 345px;
   height: 50px;
 }
+
 .btn-box a{
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 3px solid white;
   border-radius: 10px;
   background-color: var(--rossoChiaro);
   height: 100%;
   width: 40%;
-
   font-size: 20px;
   font-weight: 500;
   text-decoration: none;
   transition-duration: 0.3s;
-
   overflow: hidden;
   box-shadow: 5px 5px 5px black;
   z-index: 1;
@@ -155,7 +162,7 @@ background-color: var(--nero);
   z-index: -1;
 }
 .btn-box a:nth-child(1)::before{
-  background: var(--nero);
+  background: var(--grigio);
 }
 
 .btn-box a:hover::before{
@@ -166,9 +173,6 @@ background-color: var(--nero);
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-
-
   position: absolute; /* RICORDATI*/
   width: 170px;
   font-size: 20px;
@@ -181,18 +185,15 @@ background-color: var(--nero);
   transition-duration: 0.3s;
   overflow: hidden;
   z-index: 1;
-
-
   align-items: center;
   justify-content: center;
   display: inline-flex;
   width: 35px;
   height: 35px;
-
   border: 3px solid white;
   border-radius: 50%;
   text-decoration: none;
-  background-color: var(--nero);
+  background-color: var(--grigio);
 
 }
 
@@ -206,13 +207,23 @@ background-color: var(--nero);
   height: 100%;
   transition-duration: 0.5s;
   z-index: -1;
-
 }
 
 .home-social a:hover::before{
   width: 100%;
 }
 
+.separator{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 172px;
+  padding: 0px;
+  background: url(files_1/about_big_bkg.png);
+  position: absolute;
+  top: 850px;
+}
 /* ABOUT ME */
 
 .about{
@@ -221,8 +232,9 @@ background-color: var(--nero);
   align-items: center;
   justify-content: center;
   padding: var(--generalPadding);
+  padding-top: 0px;
   gap: 3rem; /*spazio tra le robe*/
-  background-color: var(--grigio)	;
+  background-color: var(--nero);
 }
 
 .heading{
@@ -235,14 +247,12 @@ background-color: var(--nero);
 }
 
 .about-img{
-
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-
   box-shadow: 0px 0px 10px var(--rossoScuro);
 }
 
@@ -250,7 +260,6 @@ background-color: var(--nero);
   width: 100%;
   border-radius: 50%;
   border: 0.2rem solid var(--rossoScuro);
-
 }
 
 .about h2{
@@ -268,7 +277,6 @@ background-color: var(--nero);
   transform: translate(-50%, -50%) rotate(0);
   width: 100%;
   height: 100%;
-
 }
 
 .about-content{ 
@@ -283,7 +291,7 @@ background-color: var(--nero);
 }
 
 .btn-box.new a::before{
-  background-color: var(--grigio);
+  background-color: var(--nero);
 }
 
 /* SERVICES */
@@ -321,7 +329,8 @@ background-color: var(--nero);
 
 .services-box .services-content{
   position: relative;
-  padding-left: 2rem;
+  padding: 20px;
+  padding-left: 30px;
 }
 
 .services-box .services-content::before{
@@ -338,7 +347,7 @@ background-color: var(--nero);
 .services-content{
   margin-left: 15px;
   border: 3px solid var(--rossoChiaro);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10 10 10 15;
 }
 
@@ -408,6 +417,10 @@ background-color: var(--nero);
   color: var(--grigio);
 }
 
+.btn-box.new2{
+  display: inline-flex;
+  justify-content: center;
+}
 
 .project img{
   width: 100%;
@@ -507,18 +520,8 @@ button[type=submit]{
 button[type=submit]:hover{
   color: var(--rossoChiaro); 
 }
+/*-----CSS FOR SMALL SCREENS-----*/
+@media only screen and (max-width: 600px){
 
-/*
-input[type=text] {
-  background-color: var(--rossoScuro);
-  width: 100%;
-  height: 45px;
-  border-radius: 20px;
+
 }
-
-button[type=submit] {
-  background-color: var(--grigio);
-  width: 100%;
-  height: 45px;
-}*/
-
