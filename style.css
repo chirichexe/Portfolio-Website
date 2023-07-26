@@ -7,7 +7,8 @@ https://coolors.co/1e1e1e-e1d89f-c1272d-a01d1e
 :root {
   --nero: #1e1e1e;
   --grigio: #2e2e2e;
-  --chiaro: white;
+  --chiaro: #F8F2D4;
+  --chiaro2: white;
   --rossoChiaro: #c1272d;
   --rossoScuro: #A01D1E;
   --generalPadding: 45px;
@@ -18,7 +19,7 @@ https://coolors.co/1e1e1e-e1d89f-c1272d-a01d1e
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: var(--chiaro2);
 
 }
 body{
@@ -135,7 +136,7 @@ background-color: var(--nero);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid white;
+  border: 3px solid var(--chiaro2);
   border-radius: 10px;
   background-color: var(--rossoChiaro);
   height: 100%;
@@ -191,7 +192,7 @@ background-color: var(--nero);
   display: inline-flex;
   width: 35px;
   height: 35px;
-  border: 3px solid white;
+  border: 3px solid var(--chiaro);
   border-radius: 50%;
   text-decoration: none;
   background-color: var(--grigio);
@@ -388,7 +389,7 @@ background-color: var(--nero);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--chiaro);
+  background-color: var(--chiaro2);
   width: 300px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px var(--nero);
@@ -396,7 +397,7 @@ background-color: var(--nero);
 }
 
 .project .text{
-  background-color: var(--chiaro);
+  background-color: var(--chiaro2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,7 +508,7 @@ button[type=submit]{
   outline: none;
   border: 0;
   box-shadow: 5px 5px 5px var(--nero);
-  color: white;
+  color: var(--chiaro2);
   font-weight: bold;
   font-size: large;
   background-color: var(--grigio);
