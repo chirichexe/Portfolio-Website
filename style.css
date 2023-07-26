@@ -52,7 +52,8 @@ background-color: var(--nero);
 }
 
 .name{
-  color: black;
+  color: var(--nero);
+  transition: all .5s ease;
 }
 
 .name:hover{
