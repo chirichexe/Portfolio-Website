@@ -214,16 +214,14 @@
             <form class="fields" action=<?php $_SERVER["PHP_SELF"]?>>
               <input type="text" name="name" placeholder="Your Name" required>
               <input type="text" name="email" placeholder="Your Email" required>
-              <textarea name="Message" id="message" cols="6" placeholder="Your Message"></textarea>
+              <textarea required name="message" id="message" cols="6" placeholder="Your Message"></textarea>
               <input type="submit" name ="sendmail" value ="Send"></input>
             </form>
             <?php
               require './mailer/mailsender.php';
-              if($_SERVER["REQUEST_METHOD"]=="POST"){
-                if (isset($_POST["sendmail"])){
-                  echo "asodoqaosd";
+                if (isset($_POST['sendmail'])){
+                  $res = send_mail($_POST['email'], "Richiesta assunzione", $_POST['message']);
                 }
-              }
             ?>
           </div>
         </div>
