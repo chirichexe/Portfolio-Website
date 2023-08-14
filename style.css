@@ -501,7 +501,7 @@ form input, form textarea{
   border-radius: 6px;
 }
 
-button[type=submit]{
+input[type=submit]{
   height: 50px;
   width: 140px;
   border-radius: 20px;
@@ -519,7 +519,7 @@ button[type=submit]{
   color: var(--rossoChiaro);
 }
 
-button[type=submit]:hover{
+input[type=submit]:hover{
   color: var(--rossoChiaro); 
 }
 /*-----CSS FOR SMALL SCREENS-----*/

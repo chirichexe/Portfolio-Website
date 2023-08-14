@@ -211,13 +211,20 @@
         <div class="container-right" id="container-right">
           <h1 id="send-message">Send me a message.</h1>
           <div class="fields">
-
-            <form class="fields">
+            <form class="fields" action=<?php $_SERVER["PHP_SELF"]?>>
               <input type="text" name="name" placeholder="Your Name" required>
               <input type="text" name="email" placeholder="Your Email" required>
               <textarea name="Message" id="message" cols="6" placeholder="Your Message"></textarea>
+              <input type="submit" name ="sendmail" value ="Send"></input>
             </form>
-            <button type="submit">Submit</button>
+            <?php
+              require './mailer/mailsender.php';
+              if($_SERVER["REQUEST_METHOD"]=="POST"){
+                if (isset($_POST["sendmail"])){
+                  echo "asodoqaosd";
+                }
+              }
+            ?>
           </div>
         </div>
       </div>
