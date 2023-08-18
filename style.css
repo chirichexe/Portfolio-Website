@@ -23,9 +23,10 @@ https://coolors.co/1e1e1e-e1d89f-c1272d-a01d1e
 
 }
 body{
-background-color: var(--nero);
+  background-color: var(--nero);
 
 }
+
 /* HEADER */
 .header{
   display: flex;
@@ -40,6 +41,11 @@ background-color: var(--nero);
   padding: 20px 8%;
   color: black;
   transition: all .5s ease;
+}
+
+.header img{
+  width:50px;
+  height:50px;
 }
 
 .logo{
@@ -97,13 +103,13 @@ background-color: var(--nero);
   background-color: transparent;
   align-items: center;
   padding: var(--generalPadding);
-  /*width: 50vw;*/
   height: 110vh;
   background-image: url(files_1/big_bkg.png);
 }
 
 .home-content{
-  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .home h1{
@@ -126,7 +132,7 @@ background-color: var(--nero);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 40px;
   width: 345px;
   height: 50px;
 }
@@ -175,11 +181,9 @@ background-color: var(--nero);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute; /* RICORDATI*/
   width: 170px;
   font-size: 20px;
-  margin-top: 50px;
-
+  margin-top: 100px;
 }
 
 .home-social a{
@@ -192,10 +196,10 @@ background-color: var(--nero);
   display: inline-flex;
   width: 35px;
   height: 35px;
-  border: 3px solid var(--chiaro);
+  border: 3px solid var(--chiaro2);
   border-radius: 50%;
   text-decoration: none;
-  background-color: var(--grigio);
+  background-color: transparent;
 
 }
 
@@ -216,6 +220,7 @@ background-color: var(--nero);
 }
 
 .separator{
+  background-color: #1e1e1e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,7 +229,8 @@ background-color: var(--nero);
   padding: 0px;
   background: url(files_1/about_big_bkg.png);
   position: absolute;
-  top: 850px;
+  bottom: -10vh;
+  
 }
 /* ABOUT ME */
 
@@ -523,7 +529,113 @@ input[type=submit]:hover{
   color: var(--rossoChiaro); 
 }
 /*-----CSS FOR SMALL SCREENS-----*/
-@media only screen and (max-width: 600px){
 
+nav .bx{
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  /*navbar*/
+  nav .bx{
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    display: none;
+    background: var(--chiaro);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    
+  }
+
+  .header{
+    display: none;
+    max-width: 100%;
+    height: 50px;
+    padding: 0px;
+  }
+  .logo{
+    margin-left: 15px;
+  }
+  .header img{
+    width: 30px;
+    height: 30px;
+  }
+
+  /*home*/
+
+  .home{
+    padding: 15px;
+    max-width: 100%;
+    background-position-x: -200px;
+    background-image: url(files_1/small_bkg.png);
+  }
+
+  .separator{
+    
+  max-width: 100%;
+  }
+
+  .home-content{
+    display: flex;
+    justify-content: center;
+  }
+
+  .home h1{
+    font-size: 60px;
+  }
+
+  .home h3{
+    font-size: 20px;
+    max-width: 300px;
+  }
+
+  .home p{
+    font-size: 15px;
+    width: 60%;
+  }
+
+  .name{
+    font-size: 20px;
+  }
+  .none{
+    font-size: 20px;
+  }
+
+  .btn-box{
+    width: 80%;
+  }
+  .btn-box a{
+    font-size: 100%;
+  }
+
+  .home-social{
+    margin-top: 70px;
+  }
+
+  .portfolio-content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*portfolio*/
+  .portfolio-content{
+    gap: 30px;
+  }
+
+  .btn-box.new2{
+    margin-top: 0px;
+    width: 250px;
+  }
 
 }

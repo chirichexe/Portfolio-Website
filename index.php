@@ -18,7 +18,7 @@
 
     <header class="header" id="header">
         <a href="#" class="logo">
-          <img src="files_1\MyLogo.png" alt="D" style="width:50px; height:50px" >
+          <img src="files_1\MyLogo.png" alt="D">
           <div class="name" id="name">avide Chirichella</div><div class="none" id="none">.</div>
         </a>
         <nav class="navbar" id="navbar">
@@ -34,16 +34,13 @@
       <div class="home-content">
           <h1>Hi, I'm Davide!</h1>
           <h3>Computer Engineering Student - @unibo</h3>
-        <p class="content-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-           sed do eiusmod tempor incididunt ut labore et dolore
-           magna aliqua. Ut enim ad minim veniam, quis nostrud
+          <p class="content-txt">I develop things, with a cup of creativity.
+           </p>
 
-           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-             <div class="btn-box">
-                 <a href="#">Hire Me</a>
-                 <a href="#">Let's Talk!</a>
-             </div>
+          <div class="btn-box">
+            <a href="#">My Blog</a>
+            <a href="#">Let's Talk!</a>
+          </div>
 
           <div class="home-social">
             <a href="https://www.instagram.com/davidechirichella_/"><i class='bx bxl-instagram'></i></a>

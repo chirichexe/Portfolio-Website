@@ -16,17 +16,21 @@
 </head>
   <body>
 
-    <header class="header" id="header">
+    <header class="header" id= "header">
         <a href="#" class="logo">
-          <img src="files_1\MyLogo.png" alt="D" style="width:50px; height:50px" >
+          <img src="files_1\MyLogo.png" alt="D">
           <div class="name" id="name">avide Chirichella</div><div class="none" id="none">.</div>
         </a>
         <nav class="navbar" id="navbar">
-          <a href="#" class="active" id="navbar_el">Home</a>
-          <a href="#" id="navbar_el">About Me</a>
-          <a href="#" id="navbar_el">Services</a>
-          <a href="#" id="navbar_el">Portfolio</a>
-          <a href="#" id="navbar_el">Contacts</a>
+          <ul>
+            <a href="#" class="active" id="navbar_el">Home</a>
+            <a href="#" id="navbar_el">About Me</a>
+            <a href="#" id="navbar_el">Services</a>
+            <a href="#" id="navbar_el">Portfolio</a>
+            <a href="#" id="navbar_el">Contacts</a>
+            <i class='bx bx-menu' style="color:black"></i>
+          </ul>
+          <i class='bx bx-x' style="color: black;"></i>
         </nav>
     </header>
   <!--HOME-->
@@ -34,16 +38,13 @@
       <div class="home-content">
           <h1>Hi, I'm Davide!</h1>
           <h3>Computer Engineering Student - @unibo</h3>
-        <p class="content-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-           sed do eiusmod tempor incididunt ut labore et dolore
-           magna aliqua. Ut enim ad minim veniam, quis nostrud
+          <p class="content-txt">I develop things, with a cup of creativity.
+           </p>
 
-           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-             <div class="btn-box">
-                 <a href="#">Hire Me</a>
-                 <a href="#">Let's Talk!</a>
-             </div>
+          <div class="btn-box">
+            <a href="#">My Blog</a>
+            <a href="#">Let's Talk!</a>
+          </div>
 
           <div class="home-social">
             <a href="https://www.instagram.com/davidechirichella_/"><i class='bx bxl-instagram'></i></a>
@@ -211,13 +212,12 @@
         <div class="container-right" id="container-right">
           <h1 id="send-message">Send me a message.</h1>
           <div class="fields">
-
-            <form class="fields">
+            <form class="fields" action=<?php $_SERVER["PHP_SELF"]?>>
               <input type="text" name="name" placeholder="Your Name" required>
               <input type="text" name="email" placeholder="Your Email" required>
-              <textarea name="Message" id="message" cols="6" placeholder="Your Message"></textarea>
+              <textarea required name="message" id="message" cols="6" placeholder="Your Message"></textarea>
+              <input type="submit" name ="sendmail" value ="Send"></input>
             </form>
-            <button type="submit">Submit</button>
           </div>
         </div>
       </div>
