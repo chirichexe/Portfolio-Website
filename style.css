@@ -96,7 +96,6 @@ body{
 .navbar a.active{
   color: var(--rossoChiaro);
 }
-
 /* HOME */
 .home{
   display: flex;
@@ -232,6 +231,7 @@ body{
   bottom: -10vh;
   
 }
+
 /* ABOUT ME */
 
 .about{
@@ -300,6 +300,39 @@ body{
 
 .btn-box.new a::before{
   background-color: var(--nero);
+}
+
+.about-more{
+  margin-left: 10px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: left;
+  gap: 40px;
+
+}
+
+.about-more h1{
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: var(--chiaro2);
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+.selected{
+  background-color: var(--rossoChiaro);
+  width: 0px;
+  height: 4px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.selected-content{
+  margin-top: 20px;
+
+}
+
+#selection-content{
+  display: none;
 }
 
 /* SERVICES */
@@ -528,33 +561,57 @@ input[type=submit]{
 input[type=submit]:hover{
   color: var(--rossoChiaro); 
 }
-/*-----CSS FOR SMALL SCREENS-----*/
 
 nav .bx{
   display: none;
 }
 
+/*SMALL SCREENS*/
+
 @media only screen and (max-width: 600px){
   /*navbar*/
+
+  .navbar{
+    width: 150px;
+  }
   nav .bx{
     display: block;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  nav .bx-menu{
+    margin-left: 100px;
   }
 
   nav ul {
-    display: none;
     background: var(--chiaro);
     position: fixed;
     top: 0;
-    right: 0;
-    width: 200px;
+    right: -130px;
+    width: 130px;
     height: 100vh;
     padding-top: 50px;
-    
+    z-index: 2;
+  }
+
+  nav ul a{
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .bx{
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    cursor: pointer;
+  }
+
+  nav ul .bx-x{
+    margin-top: -10px;
   }
 
   .header{
-    display: none;
     max-width: 100%;
     height: 50px;
     padding: 0px;
@@ -574,11 +631,6 @@ nav .bx{
     max-width: 100%;
     background-position-x: -200px;
     background-image: url(files_1/small_bkg.png);
-  }
-
-  .separator{
-    
-  max-width: 100%;
   }
 
   .home-content{
@@ -638,4 +690,81 @@ nav .bx{
     width: 250px;
   }
 
+  #services{
+    max-width: 375px;
+  }
+
+  #section{
+    max-width: 375px;
+  }
+
+  .portfolio-section{
+    max-width: 375px;
+  }
+  
+  .project{
+    width: 205px;
+  }
+
+  .container{
+    padding: 20px;
+  }
+
+  .container-left{
+    max-width: 375px;
+  }
+
+  .inner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+  }
+
+  .container-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .btn-box.new{
+    font-size: 20px;
+    width: 250px;
+  }
+
+  .btn-box.new a{
+    width: 100px;
+    font-size: 15px;
+  }
+  
+  .about-more h1{
+    font-size: 20px;
+  }
+
+  .about-more{
+    padding: 0px;
+    margin-top: 25px;
+    margin-left: 0px;
+    gap: 40px;
+    width: 350px;
+  }
+
 }
+
+/*22/08*/

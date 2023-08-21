@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Davide Chirichella</title>
   <link rel="stylesheet" href="style.css">
@@ -22,15 +22,16 @@
           <div class="name" id="name">avide Chirichella</div><div class="none" id="none">.</div>
         </a>
         <nav class="navbar" id="navbar">
-          <ul>
+          <ul id="sidemenu">
             <a href="#" class="active" id="navbar_el">Home</a>
-            <a href="#" id="navbar_el">About Me</a>
-            <a href="#" id="navbar_el">Services</a>
-            <a href="#" id="navbar_el">Portfolio</a>
-            <a href="#" id="navbar_el">Contacts</a>
-            <i class='bx bx-menu' style="color:black"></i>
+            <a href="#about" id="navbar_el">About Me</a>
+            <a href="#services" id="navbar_el">Services</a>
+            <a href="#portfolio" id="navbar_el">Portfolio</a>
+            <a href="#contatti" id="navbar_el">Contacts</a>
+            <i class='bx bx-x' style="color:black" onclick="closemenu()"></i>
+            
           </ul>
-          <i class='bx bx-x' style="color: black;"></i>
+          <i class='bx bx-menu'id ="opening" style="color: black;" onclick="openmenu()"></i>
         </nav>
     </header>
   <!--HOME-->
@@ -50,7 +51,7 @@
             <a href="https://www.instagram.com/davidechirichella_/"><i class='bx bxl-instagram'></i></a>
             <a href="https://www.linkedin.com/in/davide-chirichella-88200b1ba/"><i class='bx bxl-linkedin'></i></a>
             <a href="#"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
 
            </div>
       </div>
@@ -73,14 +74,88 @@
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id laborum.</p>
+         nisi ut aliquip ex ea commodo consequat.</p>
+      <div id="selection-content">
+        <div class="about-more">
+          <h1 id="edutext" onclick="selectedu()">Education <div class="selected" id="edu"></div></h1>
+          <h1 id="skillstext" onclick="selectskills()">Skills <div class="selected" id="skills"></div></h1>
+          <h1 id="cvtext" onclick="selectcv()">See my CV<div class="selected" id="cv"></div></h1>
+        </div>
 
-          <div class="btn-box new">   <!--/Faccio in modo che sia una classe "figlia"-->
-            <a href="https://google.com" >Read More</a>
-          </div>
+        <div class="selected-content" id="educontent">
+          <p>1Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio doloremque sed 
+            porro maxime, velit officiis dolores debitis nobis adipisci
+            odit itaque accusantium voluptates ut vero sit unde! Aliquid, corrupti officiis.</p>
+        </div>
+        <div class="selected-content" id="skillscontent">
+          <p>2Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio doloremque sed 
+            porro maxime, velit officiis dolores debitis nobis adipisci
+            odit itaque accusantium voluptates ut vero sit unde! Aliquid, corrupti officiis.</p>
+        </div>
+        <div class="selected-content" id="cvcontent">
+          <p>3Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio doloremque sed 
+            porro maxime, velit officiis dolores debitis nobis adipisci
+            odit itaque accusantium voluptates ut vero sit unde! Aliquid, corrupti officiis.</p>
+        </div>
+      </div>
+      <script>
+        var skills = document.getElementById('skills');
+        var skillstext = document.getElementById('skillstext');
+        var skillscontent = document.getElementById('skillscontent'); 
+        var cv = document.getElementById('cv');
+        var cvtext = document.getElementById('cvtext');
+        var cvcontent = document.getElementById('cvcontent');
+        var edu = document.getElementById('edu');
+        var edutext = document.getElementById('edutext');
+        var educontent = document.getElementById('educontent');
+
+        function selectedu(){
+          edu.style.width = "100px";
+          edutext.style.color = "white";
+          educontent.style.display = "block";
+          cv.style.width = "0px";
+          cvtext.style.color = "transparent";
+          cvcontent.style.display = "none";
+          skills.style.width="0px";
+          skillstext.style.color = "transparent";
+          skillscontent.style.display = "none";
+        }
+
+        function selectcv(){
+          cv.style.width = "100px";
+          cvtext.style.color = "white";
+          cvcontent.style.display = "block";
+          edu.style.width = "0px";
+          edutext.style.color = "transparent";
+          educontent.style.display = "none";
+          skills.style.width="0px";
+          skillstext.style.color = "transparent";
+          skillscontent.style.display = "none";
+        }
+
+        function selectskills(){
+          skills.style.width = "50px";
+          skillstext.style.color = "white";
+          skillscontent.style.display = "block";
+          cv.style.width = "0px";
+          cvtext.style.color = "transparent";
+          cvcontent.style.display = "none";
+          edu.style.width= "0px";
+          edutext.style.color = "transparent";
+          educontent.style.display = "none";
+        }
+      </script>
+      
+      <div class="btn-box new">   <!--/Faccio in modo che sia una classe "figlia"-->
+        <a onclick="readmore()" >Read More</a>
+        <script>
+          function readmore(){
+            var sect = document.getElementById("selection-content");
+            sect.style.display = "block";
+            selectedu();
+          }
+        </script>
+      </div>
      </div>
    </section>
 
@@ -127,54 +202,53 @@
 
 <!--/PORTFOLIO-->
 <section class="portfolio" id="portfolio">
-    <div class="portfolio-section">
-    <h2 class="heading">My <span>Portfolio</span></h2>
-    <div class="portfolio-content">
-      <div class="project">
-          <div class="inner">
-            <a href="https://google.com">
-              <img id="img" src=".\files_1\project1_img.jpg" alt="Img_me">
-            </a>
-          </div>
-          <div class="text">
-            <h1>First Project</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum officiis architecto aliquid nobis tenetur odio </p></i>
-          </div>
-      </div>
-
-      <div class="project">
+  <div class="portfolio-section">
+  <h2 class="heading">My <span>Portfolio</span></h2>
+  <div class="portfolio-content">
+    <div class="project">
         <div class="inner">
           <a href="https://google.com">
-            <img id="img" src=".\files_1\project2_img.jpg" alt="Img_me">
+            <img id="img" src=".\files_1\project1_img.jpg" alt="Img_me">
           </a>
         </div>
-        <div class="text">          
-          <h1>Second Project</h1>
+        <div class="text">
+          <h1>First Project</h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum officiis architecto aliquid nobis tenetur odio </p></i>
         </div>
-      </div>
+    </div>
 
-      <div class="project">
-        <div class="inner">
-          <a href="https://google.com">
-            <img id="img" src=".\files_1\project3_img.jpg" alt="Img_me">
-          </a>
-        </div>
-        <div class="text">         
-          <h1>Third Project</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum officiis architecto aliquid nobis tenetur odio </p></i>
-        </div>
+    <div class="project">
+      <div class="inner">
+        <a href="https://google.com">
+          <img id="img" src=".\files_1\project2_img.jpg" alt="Img_me">
+        </a>
+      </div>
+      <div class="text">          
+        <h1>Second Project</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum officiis architecto aliquid nobis tenetur odio </p></i>
       </div>
     </div>
-      
-      <div class="btn-box new2">
-        <a href="https://google.com">See more</a>
+
+    <div class="project">
+      <div class="inner">
+        <a href="https://google.com">
+          <img id="img" src=".\files_1\project3_img.jpg" alt="Img_me">
+        </a>
+      </div>
+      <div class="text">         
+        <h1>Third Project</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum officiis architecto aliquid nobis tenetur odio </p></i>
       </div>
     </div>
-    </section>
+  </div>
+    
+    <div class="btn-box new2">
+      <a href="https://google.com">See more</a>
+    </div>
+  </div>
+  </section>
 
-
-<!--/CONTACTS-->
+  <!--/CONTACTS-->
 <section class="contatti" id="contatti">
   <h2 class="heading">Contact <span>Me</span></h2>
     <div class="container">
@@ -203,8 +277,8 @@
             </div>
             <div class="text-wrapper">
                 <h1>E-Mail</h1>
-                <p>Personal: davidechirichella10@gmail.com <br>
-                  Institutional: davide.chirichella@studio.unibo.it
+                <p>Personal: davidechirichella10@gmail.com<br>
+                  Institutional: davide.chirichella@studio.unibo.com
                 </p>
             </div>
           </div>
@@ -212,7 +286,7 @@
         <div class="container-right" id="container-right">
           <h1 id="send-message">Send me a message.</h1>
           <div class="fields">
-            <form class="fields" action=<?php $_SERVER["PHP_SELF"]?>>
+            <form class="fields">
               <input type="text" name="name" placeholder="Your Name" required>
               <input type="text" name="email" placeholder="Your Email" required>
               <textarea required name="message" id="message" cols="6" placeholder="Your Message"></textarea>
@@ -222,5 +296,18 @@
         </div>
       </div>
 </section>
+
 </body>
+
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0px";
+}
+
+function closemenu(){
+    sidemenu.style.right = "-130px";
+}
+</script>
 </html>
