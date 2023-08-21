@@ -56,8 +56,11 @@
            </div>
       </div>
     </section>
+    <!--
     <div class="separator">
     </div>
+    -->
+
 
 <!--/ABOUT-->
    <section class="about" id="about">
@@ -145,17 +148,31 @@
           educontent.style.display = "none";
         }
       </script>
-      
       <div class="btn-box new">   <!--/Faccio in modo che sia una classe "figlia"-->
-        <a onclick="readmore()" >Read More</a>
-        <script>
-          function readmore(){
-            var sect = document.getElementById("selection-content");
-            sect.style.display = "block";
-            selectedu();
-          }
-        </script>
+        <a onclick="readmore()" id="more">Read More</a>
+        <a onclick="readless()" id="less">Read Less</a>
       </div>
+
+      <script>
+        function readmore() {
+          var sect = document.getElementById("selection-content");
+          var buttonmore = document.getElementById("more");
+          var buttonless = document.getElementById("less");
+          buttonmore.style.display = "none";
+          buttonless.style.display = "flex";
+          sect.style.display = "block";
+          selectedu();
+        }
+      
+        function readless() {
+          var sect = document.getElementById("selection-content");
+          var buttonmore = document.getElementById("more");
+          var buttonless = document.getElementById("less");
+          buttonmore.style.display = "flex";
+          buttonless.style.display = "none";
+          sect.style.display = "none";
+        }
+      </script>
      </div>
    </section>
 
@@ -243,7 +260,7 @@
   </div>
     
     <div class="btn-box new2">
-      <a href="https://google.com">See more</a>
+      <a href=".\projects.html">See more</a>
     </div>
   </div>
   </section>

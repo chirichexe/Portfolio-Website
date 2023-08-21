@@ -104,6 +104,7 @@ body{
   padding: var(--generalPadding);
   height: 110vh;
   background-image: url(files_1/big_bkg.png);
+  background-position-x: -100px;
 }
 
 .home-content{
@@ -218,6 +219,7 @@ body{
   width: 100%;
 }
 
+/*
 .separator{
   background-color: #1e1e1e;
   display: flex;
@@ -230,7 +232,7 @@ body{
   position: absolute;
   bottom: -10vh;
   
-}
+}*/
 
 /* ABOUT ME */
 
@@ -290,12 +292,23 @@ body{
 .about-content{ 
   text-align: center;
   font-size: larger;
-  margin: 3rem 0 2rem;
+  margin: 0 0 2rem;
+}
+
+.about-content h3{ 
+  color: var(--rossoChiaro);
+  margin-bottom: 30px;
 }
 
 .btn-box.new{
   display: inline-flex;
   justify-content: center;
+}
+
+.btn-box.new a{
+  background-color: var(--rossoChiaro);
+  display: flex;
+  align-items: center;
 }
 
 .btn-box.new a::before{
@@ -308,10 +321,14 @@ body{
   display: flex;
   justify-content: left;
   gap: 40px;
+}
 
+#less{
+  display: none;
 }
 
 .about-more h1{
+  font-size: 40px;
   -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: var(--chiaro2);
   color: transparent;
@@ -328,8 +345,9 @@ body{
 
 .selected-content{
   margin-top: 20px;
-
 }
+
+
 
 #selection-content{
   display: none;
