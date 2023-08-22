@@ -104,7 +104,7 @@ body{
   padding: var(--generalPadding);
   height: 110vh;
   background-image: url(files_1/big_bkg.png);
-  background-position-x: -100px;
+  background-position-y: -65px;
 }
 
 .home-content{
